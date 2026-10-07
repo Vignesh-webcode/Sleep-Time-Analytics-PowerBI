@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "6e92ebaa233badeebde0",
+  "position": {
+    "x": 52.777777777777779,
+    "y": 427.77777777777777,
+    "z": 0,
+    "height": 569.44444444444446,
+    "width": 908.33333333333337,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineStackedColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "screen_brightness_pct"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.screen_brightness_pct",
+              "nativeQueryRef": "screen_brightness_pct",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Average sleep"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Average sleep",
+              "nativeQueryRef": "Average sleep"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Average Fatigue Score"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Average Fatigue Score",
+              "nativeQueryRef": "Average Fatigue Score"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bedtime_screentime_project"
+                  }
+                },
+                "Property": "Average sleep"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

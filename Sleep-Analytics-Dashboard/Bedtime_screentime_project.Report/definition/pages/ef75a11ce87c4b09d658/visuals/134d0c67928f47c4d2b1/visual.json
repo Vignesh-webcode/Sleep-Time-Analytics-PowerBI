@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "134d0c67928f47c4d2b1",
+  "position": {
+    "x": 102.77777777777779,
+    "y": 663.88888888888891,
+    "z": 2000,
+    "height": 194.44444444444446,
+    "width": 305.55555555555554,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Total wakeup snoozes"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Total wakeup snoozes",
+              "nativeQueryRef": "Total wakeup snoozes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bedtime_screentime_project"
+                  }
+                },
+                "Property": "Total wakeup snoozes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

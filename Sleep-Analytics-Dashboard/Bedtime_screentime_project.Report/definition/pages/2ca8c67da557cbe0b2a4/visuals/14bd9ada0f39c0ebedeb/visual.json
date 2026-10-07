@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "14bd9ada0f39c0ebedeb",
+  "position": {
+    "x": 52.777777777777779,
+    "y": 41.666666666666671,
+    "z": 1000,
+    "height": 366.66666666666669,
+    "width": 566.66666666666674,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "chronotype"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.chronotype",
+              "nativeQueryRef": "chronotype",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "primary_bedtime_app"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.primary_bedtime_app",
+              "nativeQueryRef": "primary_bedtime_app",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Average sleep"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Average sleep",
+              "nativeQueryRef": "Average sleep"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b490e44cbd71273e5f45",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bedtime_screentime_project"
+              }
+            },
+            "Property": "primary_bedtime_app"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a79fc479253f733653d8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bedtime_screentime_project"
+              }
+            },
+            "Property": "chronotype"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d0cf20ba4c16653d6e0f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bedtime_screentime_project"
+              }
+            },
+            "Property": "Average sleep"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

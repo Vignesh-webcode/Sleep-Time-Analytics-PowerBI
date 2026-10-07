@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "a8c41a31da5a3a22aeb5",
+  "position": {
+    "x": 102.77777777777779,
+    "y": 175,
+    "z": 0,
+    "height": 205.55555555555557,
+    "width": 305.55555555555554,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Average sleep"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Average sleep",
+              "nativeQueryRef": "Average sleep"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bedtime_screentime_project"
+                  }
+                },
+                "Property": "Average sleep"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

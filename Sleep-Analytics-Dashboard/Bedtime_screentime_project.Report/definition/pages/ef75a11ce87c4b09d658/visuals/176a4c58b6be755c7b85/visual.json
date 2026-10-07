@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "176a4c58b6be755c7b85",
+  "position": {
+    "x": 1127.7777777777778,
+    "y": 175,
+    "z": 4000,
+    "height": 683.33333333333337,
+    "width": 661.11111111111109,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "occupation_type"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.occupation_type",
+              "nativeQueryRef": "occupation_type",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Average sleep"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Average sleep",
+              "nativeQueryRef": "Average sleep"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bedtime_screentime_project"
+                  }
+                },
+                "Property": "Average sleep"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

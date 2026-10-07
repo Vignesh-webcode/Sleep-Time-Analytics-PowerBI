@@ -1,0 +1,89 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "c0e6f6d8ccab752b3b39",
+  "position": {
+    "x": 705.55555555555554,
+    "y": 33.333333333333336,
+    "z": 0,
+    "height": 486.11111111111114,
+    "width": 986.1111111111112,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "sleep_debt_category"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.sleep_debt_category",
+              "nativeQueryRef": "sleep_debt_category",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Avg REM Sleep %"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Avg REM Sleep %",
+              "nativeQueryRef": "Avg REM Sleep %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Avg Deep Sleep %"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Avg Deep Sleep %",
+              "nativeQueryRef": "Avg Deep Sleep %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bedtime_screentime_project"
+                  }
+                },
+                "Property": "Avg REM Sleep %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

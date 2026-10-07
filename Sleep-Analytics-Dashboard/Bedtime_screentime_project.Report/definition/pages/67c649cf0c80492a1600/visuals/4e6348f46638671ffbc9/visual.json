@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "4e6348f46638671ffbc9",
+  "position": {
+    "x": 705.55555555555554,
+    "y": 538.88888888888891,
+    "z": 1000,
+    "height": 522.22222222222229,
+    "width": 986.1111111111112,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "gender"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.gender",
+              "nativeQueryRef": "gender"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bedtime_screentime_project"
+                        }
+                      },
+                      "Property": "physical_activity_min"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bedtime_screentime_project.physical_activity_min)",
+              "nativeQueryRef": "Sum of physical_activity_min"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bedtime_screentime_project"
+                        }
+                      },
+                      "Property": "caffeine_post_5pm_mg"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bedtime_screentime_project.caffeine_post_5pm_mg)",
+              "nativeQueryRef": "Sum of caffeine_post_5pm_mg",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bedtime_screentime_project"
+                    }
+                  },
+                  "Property": "Average sleep"
+                }
+              },
+              "queryRef": "bedtime_screentime_project.Average sleep",
+              "nativeQueryRef": "Average sleep"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
